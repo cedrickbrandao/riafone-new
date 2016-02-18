@@ -18,13 +18,14 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "http://177.1.199.224:8080/riafone/upload/arquivos",
                 type: "POST",
                 data: {
                     name: name,
                     phone: phone,
                     email: email,
-                    message: message
+                    message: message,
+					acao: "email"
                 },
                 cache: false,
                 success: function() {
