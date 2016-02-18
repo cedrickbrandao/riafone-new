@@ -18,14 +18,15 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "http://177.1.199.224:8080/riafone/upload/arquivos",
+                url: "http://localhost:8080/riafone/upload/arquivos",
                 type: "POST",
                 data: {
                     name: name,
                     phone: phone,
                     email: email,
                     message: message,
-					acao: "email"
+					acao: "email",
+					site: "riafone"
                 },
                 cache: false,
                 success: function() {
@@ -49,7 +50,7 @@ $(function() {
                     $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    //$('#contactForm').trigger("reset");
                 },
             })
         },
