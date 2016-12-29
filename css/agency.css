@@ -976,6 +976,6 @@ body {
 }
 
 #div-servico {
-	height: 350px;
+	--height: 350px;
 	margin-bottom: 20px;
 }
